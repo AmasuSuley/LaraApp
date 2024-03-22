@@ -11,7 +11,7 @@
 </head>
 </head>
 <body>
-    <h1 style="margin-left:70px">create Message</h1>
+    <h1 style="margin-left:70px">Your Message</h1>
     <div>
       @if($errors->any())
       <ul>
