@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class posts extends Model
+class waste extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'tittle',
-        'body',
-        'user_id',
+        
+         'Account_name',
+        'waste_type',
+        'street_name',
+        'house_number',
+        'phone_number',
     
         
     ];
-
-public function user(){
-    return $this->belongsTo(User::class);
-}
 }

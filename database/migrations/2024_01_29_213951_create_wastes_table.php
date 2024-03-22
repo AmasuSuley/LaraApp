@@ -11,23 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('wastes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('usertype')->default('user');
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('Account_name');
+            $table->string('waste_type');
+            $table->string('street_name');
+            $table->string('house_number');
+            $table->string('phone_number');
             $table->timestamps();
         });
-    }
 
-    /**
+        
+    }   /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('wastes');
     }
 };

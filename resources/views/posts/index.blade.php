@@ -10,22 +10,61 @@
     <a href="{{route('posts.create')}}" >create post now</a>
     <br><br><br>
     <div>
-        <table border="1">
+        
+        <div>
+            @if(session()->has('success'))
+                 {{session('success')}}
+            @endif
+        </div>
+        <br><br>
+        {{-- <table border="1">
 <tr>
     <th>id</th>
     <th>Name</th>
-    <th>Body</th>  
+    <th>Body</th>
+    <th>Edit</th>
+    <th>delete</th>  
 </tr>
 @foreach ($posts  as $posts )
 <tr>
     <td>{{$posts->id}}</td>
     <td>{{$posts->tittle}}</td>
     <td>{{$posts->body}}</td>
+    <td>
+        <a href="{{route('posts.edit',['post'=>$posts])}}">Edit</a>
+    </td>
+    <td>
+        <form method="post"action="{{route('posts.destroy', ['post'=> $posts])}}">
+            @csrf
+            @method('delete')
+            <input type="submit" value="delete">
+        </form>
+    </td>
 </tr>
-@endforeach
-    
+
+    @endforeach
 
         </table>
+    </div><br> --}}
+
+    
+        @foreach ($posts  as $posts )
+        <div style="border: 2px solid; margin-left:50px; width:50%">
+        <h1 style="margin-left: 20px">{{$posts->tittle}}</h1>
+        <p style="margin-left: 20px"><a href="{{route('posts.edit',['post'=>$posts])}}">Edit</a></p>
+        <p style="margin-left: 20px">
+            <form method="post"action="{{route('posts.destroy', ['post'=> $posts])}}">
+                @csrf
+                @method('delete')
+                <input type="submit" value="delete" style="margin-left: 20px">
+            </form>
+        </p>
+        <p style="margin-left: 20px">{{$posts->body}}</p>
+        <p style="margin-left: 20px">{{$posts->created_at}}</p>
     </div>
+        @endforeach
+    
+
+    
 </body>
 </html>

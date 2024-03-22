@@ -12,10 +12,34 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
-                    <br><br><br>
-                    <a href="{{route('posts.index')}}" class="text-blue-500 hover:text-blue-955">Post page</a>
+                
+                    
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
+                   
+                    <a href="{{route('posts.index')}}" >Chating room</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
+                   
+                    <a href="{{route('waste.wasteForm')}}" >Request dump</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
 </x-app-layout>
