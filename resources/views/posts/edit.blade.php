@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>edit Posts</h1>
+    <h1>edit Post</h1>
     <div>
       @if($errors->any())
       <ul>

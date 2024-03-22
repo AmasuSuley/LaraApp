@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Posts</h1>
-    <a href="{{route('posts.create')}}" >create post now</a>
+    <a href="{{route('posts.create')}}" >create post </a>
     <br><br><br>
     <div>
         
